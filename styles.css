@@ -1,0 +1,113 @@
+:root {
+    --primary-yellow: hsl(47, 88%, 63%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grey: hsl(0, 0%, 50%);
+    --neutral-black: hsl(0, 0%, 7%);
+}
+
+@font-face {
+    font-family: 'Figtree-VariableFont_wght';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Figtree-VariableFont_wght', sans-serif;
+    font-weight: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Figtree-VariableFont_wght', sans-serif;
+    font-weight: 500;
+    background-color: var(--primary-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 1440px) {
+    p {
+        font-size: 16px;
+        color: var(--neutral-grey);
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .card {
+        background-color: var(--neutral-white);
+        border: 1px solid var(--neutral-black);
+        border-radius: 20px;
+        box-shadow: 10px 10px 0px 0px var(--neutral-black);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 375px
+    }
+
+    .card > * {
+        margin-bottom: 1em;
+    }
+        
+    .card .category {
+        background-color: var(--primary-yellow);
+        border-radius: 0.25em;
+        font-family: 'Figtree-VariableFont_wght', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 0.5em 0.75em;
+        width: fit-content;
+    }
+
+    .card .published-date {
+        font-size: 12px;
+    }
+
+    .card > .card--header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card > .card--body {
+        font-weight: 400;
+    }
+
+    .card > .card--footer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .card--footer > .avatar {
+        width: 30px;
+        margin-right: 0.5em;
+    }
+
+    .card--footer > .author {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: calc(2vh + 0vh);
+    }
+}
+
+/* Mobile screen 375px */
+@media screen and (max-width: 375px) {
+    .card {
+        width: calc(100vw - 2em);
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
