@@ -95,7 +95,7 @@ body {
         font-weight: 600;
     }
 
-    .attribution {
+    footer.attribution {
         position: absolute;
         bottom: calc(2vh + 0vh);
     }
